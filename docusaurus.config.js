@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "JS in 100 Days",
   tagline: "JavaScript is Awesome",
-  url: "js-100.vercel.app",
+  url: "https://js-100.vercel.app/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
