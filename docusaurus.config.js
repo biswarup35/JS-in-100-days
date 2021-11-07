@@ -38,6 +38,18 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "javascript",
+        path: "javascript_docs",
+        routeBasePath: "javascript",
+        sidebarPath: require.resolve("./sidebars.js"),
+        // ... other options
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -50,10 +62,9 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
+            to: "javascript/intro",
             label: "JavaScript",
+            position: "left",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
@@ -67,11 +78,11 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Tutorials",
             items: [
               {
                 label: "JavaScript",
-                to: "/docs/intro",
+                to: "/javascript/intro",
               },
             ],
           },
