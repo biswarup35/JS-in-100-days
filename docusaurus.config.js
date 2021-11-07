@@ -47,6 +47,9 @@ const config = {
         routeBasePath: "javascript",
         sidebarPath: require.resolve("./sidebars.js"),
         // ... other options
+        editUrl: "https://github.com/biswarup35/js-in-100-days/tree/main/",
+        // Equivalent to `enableUpdateTime`.
+        showLastUpdateTime: true,
       },
     ],
   ],
