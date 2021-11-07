@@ -3,7 +3,7 @@ title: Call Stack
 sidebar_position: 3
 ---
 
-## Call Stack
+## What is Call Stack
 
 JavaScript engine uses a data structure named call stack to manage execution context: the global execution context and the function execution context.
 
@@ -45,7 +45,7 @@ Our goal is to observe the call stack, we already covered the execution context 
 
 Let's now see this in action:
 
-![call stack](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/call-stack-debug-1.png)
+![call stack](/img/day-2/call-stack-debug-1.webp)
 
 I put the debugger at the very first line of the script in a `node.js` environment.
 
@@ -63,23 +63,23 @@ since the `add()` will be called at last then it should be at the top of the cal
 
 Let's see this in action, by putting the debugger at line number 3:
 
-![call stack](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/call-stack-debug-2.png)
+![call stack](/img/day-2/call-stack-debug-2.webp)
 
 As expected, all three functions are stacked together in the call stack.
 
 At this point time the `add()` completed its execution, now it will pop off from the call stack. Let's see this in action by putting the debugger at line number 6:
 
-![call stack](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/call-stack-debug-3.png)
+![call stack](/img/day-2/call-stack-debug-3.webp)
 
 As expected, the call stack pops off the `add()` from the call stack. Once the `average()` finishes its job this will too be pops off from the call stack. Let's see this in action too:
 
-![call stack](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/call-stack-debug-4.png)
+![call stack](/img/day-2/call-stack-debug-4.webp)
 
 As expected, `add()` and `average()` both the functions are pops off from the call stack as soon as they finished their job.
 
 At this time the `avg` variable will be assigned with its actual value returned from `average()` Once all the function have done their job the call stack will become empty. Let's see this in action by continuing the debugger:
 
-![call stack](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/call-stack-debug-5.png)
+![call stack](/img/day-2/call-stack-debug-5.webp)
 
 As you can see the call stack is now empty. There is nothing to execute anymore.
 
@@ -104,3 +104,11 @@ run(); // stack overflow
 <hr/>
 
 ## Resources
+
+### Articles
+
+- [📖 How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
+
+### Videos
+
+- [🎥 Part 1: An Introduction to How JavaScript Runs Code](https://youtu.be/Z6a1cLyq7Ac?list=PLWrQZnG8l0E4kd1T_nyuVoxQUaYEWFgcD)
