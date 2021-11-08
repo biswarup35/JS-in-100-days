@@ -33,13 +33,13 @@ If you run this script, it will not give an error; this is perfectly valid Javas
 
 Now let's get behind the scenes. Let me put the debugger at the very first line of the script, and watch the `number` variable and the `getNumber()` function carefully.
 
-![Hoisting ](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/hoisting-debug-1.png)
+![Hoisting ](/img/day-4/hoisting-debug-1.webp)
 
 When the debugger is at the number 1, the variable `number` and the function declaration `getNumber()` are already hoisted. Where the variable gets an initial value of `undefined` for the time being. Whereas, the function `getNumber()` it's declaration is completely hoisted.
 
 Now, let's move the debugger to line number 3: Here the JavaScript engine replaces the `undefined` value with the actual value `7` to the variable `number`, hence it logs 7
 
-![Hoisting](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/hoisting-debug-2.png)
+![Hoisting](/img/day-4/hoisting-debug-2.webp)
 
 And for the function `getNumber()` it's declaration already been hoisted, if you pass `x` number it will return `x`, hence it logs 7
 
@@ -67,7 +67,7 @@ I know some of you might be thinking, hey you are just declaring variables with 
 
 As you can see I declared a variable `myName` using the `let` keyword, and try to access it before initialization. I hold the program at the very first line of execution. Here you see `myName` variable is hoisted and assigned an initial value of `undefined` this phenomenon happens only in the case of hoisting.
 
-![Hoisting ](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/hoisting-debug-3.png)
+![Hoisting ](/img/day-4/hoisting-debug-3.webp)
 
 Still, do you have doubts? let me clear all your doubts. If I continue this program what error will occur?
 
@@ -80,9 +80,10 @@ If the variable was not hoisted, I mean not in the memory heap it will result in
 From the above examples, it is clear that `let` and `const` are too hoisted. But kept in a temporal dead zone for the time being.
 
 So far we know that the variables and the functions are hoisted in Javascript.
+:::note Tip
 
-> Note: Function expression and Arrow functions are not hoisted.
-
+Function expression and Arrow functions are not hoisted.
+:::
 Let me take an another example:
 
 ```javascript
@@ -115,7 +116,7 @@ I took same function in three diffrent ways, normal function `add()`, function e
 
 Now, let me hold the program at the first line of its execution:
 
-![Hoisting](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/hoisting-debug-4.png)
+![Hoisting](/img/day-4/hoisting-debug-4.webp)
 
 As you can see the normal function `add()` is hoisted. And we are free to use this function before its declaration. While the rest of the two are `undefined` at the moment if you trying to access them it will cause TypeErrr: `add2` is not a function. But we already defined `add2()` function using function expression.
 
@@ -132,3 +133,16 @@ The same applies for `add3()` function. From here, it is clear that the function
 <hr/>
 
 ## Resources
+
+### Reference
+
+- [📖 Hoisting - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
+
+### Articles
+
+- [📖 JavaScript Hoisting](https://www.tutorialsteacher.com/javascript/javascript-hoisting)
+
+### Videos
+
+- [🎥 Hoisting - Beau teaches JavaScript](https://youtu.be/C1PZh_ea-7I)
+- [🎥 Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3](https://youtu.be/Fnlnw8uY6jo)
