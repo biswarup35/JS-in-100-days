@@ -7,6 +7,8 @@ sidebar_position: 5
 
 The ability to access variables and functions is known as the scope in programming. JavaScript has three types of scope: global scope, local scope and block scope.
 
+### Global Scope
+
 Global Scope => If a variable or a function is accessible from anywhere i.e globally, then it has global scope.
 
 Let me take an example:
@@ -22,6 +24,8 @@ let message = "Good Morning";
 //logs
 // Good Morning
 ```
+
+### Function Scope
 
 Local Scope (aka function scope) => The variables you declare inside a function are local to that function. And it cannot be accessed outside of the function, this is known as a local scope or function scope.
 
@@ -43,6 +47,8 @@ console.log(message);
 // Good Evening
 // Good Morning
 ```
+
+### Block Scope
 
 Block Scope => To understand block scope, we must know what is a block?
 
@@ -78,9 +84,9 @@ You might notice the variable `drink` is declared using `var` did not have block
 This is the flaw of the `var` keyword in JavaScript, it somehow manages to function scope but it did not have the block scope. Hence, in ES6 the `let` and `const` keywords are introduced to fix this flaw.
 
 The `let` and `const` has block scope. Variables declared using `let` can be rea-initialized. But variables declared with `const` cannot be re-initialized.
-
-> Tip: Try to declare variables using the `const` keyword whenever possible.
-
+:::note Tip
+Try to declare variables using the `const` keyword whenever possible.
+:::
 You might have a question, in the case of block scope and function scope the declared variables have access to the local. What if I try to access the variable from an inside function or block?
 
 The answer is yes, it can be accessed from the inner function/block no matter how deep you go.
@@ -107,13 +113,13 @@ let message = "Good Morning";
 
 The code is very straightforward, now pay attention to these three variables I declared `message`, `drink` and `computer`.
 
-![Scope](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/scope-debug-1.png)
+![Scope](/img/day-5/scope-debug-1.webp)
 
 When the debugger is at `turnOnComputer()` function all three of these variables are assessable. As you can see the `turnOnComputer()` function is at the top of the call stack and all three variables are accessible from here.
 
 As soon as the `turnOnComputer()` lefts the call stack, the variable `computer` becomes not accessible from outer function `morning()` let's see this in action:
 
-![Scope](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/scope-debug-2.png)
+![Scope](/img/day-5/scope-debug-2.webp)
 
 I hold the program at line no 14. Here, the function `turnOncompter()` completed its execution and left the call stack. At this moment the `computer` variable is not accessible, it throws ReferenceError: computer is not defined.
 
@@ -154,3 +160,20 @@ The reason, we declared the `food` variable as a global variable, so we will be 
 That is why it is recommended to always declare variables with the `let` and `const` keywords.
 
 That's it all about the scope, next day we will study lexical scope.
+
+<hr />
+
+## Resources
+
+### Reference
+
+- [📖 Scope - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+
+### Articles
+
+- [📖 JavaScript Variable Scopes](https://www.javascripttutorial.net/javascript-variable-scope/)
+- [📖 JavaScript Variable Scopes - Programiz](https://www.programiz.com/javascript/variable-scope)
+
+### Videos
+
+- [🎥 Scope chaining in javascript - Hitesh Choudhry](https://youtu.be/vGGOOYOXoQ4)
