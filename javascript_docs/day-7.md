@@ -17,13 +17,9 @@ A first-class function can be expected to support the same operations we would e
 So what are these operations?
 
 - It can be stored in a variable.
-
 - It can be passed as arguments to functions.
-
 - It can be returned by functions.
-
 - It can be stored in some data structures.
-
 - It can hold its properties and methods.
 
 Let's see them one by one:
@@ -143,8 +139,19 @@ console.log(sayHi); // Logs "Hi, Puja"
 - They can be stored in some data structure.
 - They can hold their properties and methods.
 
-That's it for today, next day we will study [callbacks and closures](https://github.com/biswarup35/100-days-of-javascript/tree/main/day-eight). If you have anything to say feel free to use [Discussion tab](https://github.com/biswarup35/100-days-of-javascript/discussions) or you can connect me on [Twitter](https://twitter.com/BiswarupBouri).
-
 <hr/>
 
 ## Resources
+
+### References
+
+- [📖 First-class Function - MDN](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+
+### Articles
+
+- [📖 Discover the power of first class functions - Cristian Salcescu](https://www.freecodecamp.org/news/javascript-lexical-scope-tutorial/)
+- [📖 JavaScript Weekly: An Introduction to First-Class Functions - Severin Perez](https://medium.com/launch-school/javascript-weekly-an-introduction-to-first-class-functions-9d069e6fb137)
+
+### Videos
+
+- [🎥 JS is Easy, Part 7: First-class Functions - Source Decoded](https://youtu.be/qmQYBv5Fn-Q)
