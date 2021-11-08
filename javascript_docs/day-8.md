@@ -15,7 +15,7 @@ A callback is a function that is to be executed after another function has finis
 
 In JavaScript, functions are objects. Because of this, functions can take functions as arguments and can be returned by other functions. Functions that do this are known as a higher-order functions.
 
-![Callback Demo](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/callback-function-example.png)
+![Callback Demo](/img/day-8/callback-function-example.webp)
 
 ## Callbacks are used in two ways:
 
@@ -97,9 +97,9 @@ In the above example, the JavaScript engine did not wait for the `.map()` functi
 ### Asynchronous callback functions
 
 Asynchronous means that if the JavaScript Engine has to wait for an operation to execute. It will execute the rest of the code while waiting.
-
-> JavaScript is a single-threaded programming language. It carries asynchronous operations via callback queue and event loop.
-
+:::tip
+JavaScript is a single-threaded programming language. It carries asynchronous operations via callback queue and event loop.
+:::
 Let's take an example:
 Suppose we need to code a program, where we will download a file. After finishing the download, it will open.
 
@@ -181,7 +181,7 @@ Hope you get the idea of callback functions.
 
 ## Closure
 
-Let's go back to the day 5 and 6: We studied the [function scope](https://github.com/biswarup35/100-days-of-javascript/tree/main/day-five). Where we learned we cannot access variables declared on other functions unless it is [lexically bounded](https://github.com/biswarup35/100-days-of-javascript/tree/main/day-six).
+Let's go back to the day 5 and 6: We studied the function scope. Where we learned we cannot access variables declared on other functions unless it is lexically bounded.
 
 let's take an example:
 If we try to access a variable declared on another function we will get a ReferenceError.
@@ -285,15 +285,15 @@ Hi, Akashy
 
 Now let me show you an interesting thing, I stop the execution right after the `greetingHello("Biswarup")` function has finished executing. At this point, if we watch the `greeetToBiswarup` variable is assigned a value with `Hello, Biswarup`. Till now everything looks good. Do you remember how this variable is assigned? Yes, the value assigned by the `greet()` function, alright. So the value is a combination of `person` and `message` variables right? Yes, thus it returned `Hello, Biswarup`.
 
-![Closure](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/closure-debug-1.png)
+![Closure](/img/day-8/closure-debug-1.webp)
 
 Normally, a local variable only exists during the execution of the function. The `sayHello()` function has done executing, it was contained with a local variable `message`. Now the `sayHello()` function is not the call stack, we have no longer access to the `message` variable, very good!
 
-![Closure](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/closure-debug-2.png)
+![Closure](/img/day-8/closure-debug-2.webp)
 
 Here is the fun part, still have access to the `message` variable. Let me remind you, the variable `greetToBiswarup` is a combination of the `message` and `person` variable right? And we have no longer access to these variables, right? But `greetToBiswarup` contains the value of the above variables. How? this happened because the callback function and the lexical scope together formed a **closure**.
 
-![Closure](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/closure-debug-3.png)
+![Closure](/img/day-8/closure-debug-3.webp)
 
 Let me explain, the `greet()` function is nested inside the `sayHello()` function. The `sayHello()` function receives two arguments a callback function and a variable. The callback function is nested inside the `sayHello()` function which is lexically bunded by the `sayHello()` function, meaning the callback function has access, to the `sayHello()` function's scope. At the same time the callback function is referencing to the `greet()` function, meaning the `greet()` function has access to the `sayHello()` function's scope. That's how the `greetingHello()` gain access to the `message` variable. But we cannot directly access the `message` variable. The `greetingHello()` function has access to the `message` variable because of the **closure**.
 
@@ -307,12 +307,22 @@ A closure is a combination of a function bundled together (enclosed) with refere
 
 - With a closure, we can store data in a separate scope and share it only where necessary. In other words, with closure, we can achieve data encapsulation.
 
-![Closure](https://github.com/biswarup35/100-days-of-javascript/blob/main/images/closure-debug-4.png)
+![Closure](/img/day-8/closure-debug-4.webp)
 
 In the above example, the `message` variable is encapsulated. It cannot be accessed by the outer world. However, its value is available to the outer world.
-
-That's it for today. Next, we will learn currying vs partial function. If you have anything to say feel free to use [Discussion tab](https://github.com/biswarup35/100-days-of-javascript/discussions) or you can connect me on [Twitter](https://twitter.com/BiswarupBouri).
 
 <hr/>
 
 ## Resources
+
+### References
+
+- [📖 Callback function - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+
+### Articles
+
+- [📖 JavaScript Callback Functions – What are Callbacks in JS and How to Use Them - Cem Eygi](https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/)
+
+### Videos
+
+- [🎥 Asynchronous JavaScript Tutorial #4 - Callback Functions - The Net Ninja](https://youtu.be/K-Q-xyrA89M)
