@@ -279,8 +279,17 @@ So, that's it all about partial function application. The same functionality can
 
 - Partial function application is pre-filling the arguments from top to bottom while using each returned function separately.
 
-<hr/>
-
 Hope You get the idea of Currying and Partial Function Applications. Next we will be learning more about `this` keyword in JavaScript, `Function.prototype.call()`, `Function.prototype.apply()` and `Function.prototype.bind()`
 
-If you have anything to say feel free to use [Discussion tab](https://github.com/biswarup35/100-days-of-javascript/discussions) or you can connect me on [Twitter](https://twitter.com/BiswarupBouri).
+<hr/>
+
+## Resources
+
+### Articles
+
+- [📖 Currying in JavaScript - Suprabha](https://dev.to/suprabhasupi/currying-in-javascript-1k3l)
+- [📖 Currying](https://javascript.info/currying-partials)
+
+### Videos
+
+- [🎥 Currying - Part 6 of Functional Programming in JavaScript - Fun Fun Function](https://youtu.be/iZLP4qOwY8I)
