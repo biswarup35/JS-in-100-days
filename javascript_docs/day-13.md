@@ -81,7 +81,7 @@ When the timer is completed then the Callback function will be enqueued into the
 
 ### What is Callback Queue?
 
-This is the second data structure used by the JavaScript engine and it plays an important role in the asynchronous nature of JavaScript. The Callback Queue is also known as Message Queue, Event Queue. The Job of the Callback Queue is to enqueue the Callback functions returned from the thread poop.
+This is the second data structure used by the JavaScript engine and it plays an important role in the asynchronous nature of JavaScript. The Callback Queue is also known as Message Queue, Event Queue. The Job of the Callback Queue is to enqueue the Callback functions returned from the thread pool.
 
 Let's visualize the above example:
 
